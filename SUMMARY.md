@@ -1,34 +1,13 @@
-# KengBook
+# Table of contents
 
-* [前言](./Docs/index.md)
-* [操作系统]()
-
-  * [Linux]()
-    * Ubuntu
-    * Centos
-    * Debian
-    * Other
-  * [Windows]()
-  * [MacOS]()
-* [环境配置]()
-
-  * [Docker]()
-  * [Git]()
-  * [Python]()
-  * [Java]()
-  * [C/C++]()
-  * [Matlab]()
-  * ……
-* [日常开发]()
-
-  * [Android]()
-* [小程序]()
-  * [前端]()
-* [后端]()
-  * [数据库]()
-  * [MySQL]()
-    * [Redis]()
-  * [MongDB]()
-* [运营维护]()
-  * [Nginx]()
-  * [Apache]()
+* [前言](README.md)
+* [操作系统](cao-zuo-xi-tong/README.md)
+  * [Linux](cao-zuo-xi-tong/linux/README.md)
+    * [Ubuntu](cao-zuo-xi-tong/linux/ubuntu.md)
+  * [Windows](cao-zuo-xi-tong/windows.md)
+  * [MacOS](cao-zuo-xi-tong/macos.md)
+* [环境配置](README.md)
+* [日常开发](README.md)
+* [小程序](README.md)
+* [后端](README.md)
+* [运营维护](README.md)
