@@ -24,14 +24,22 @@
   sys.path.append("模块路径")
   ```
 
+- **相关知识点：**
+  
+  - [Python模块导入与路径管理](https://zhuanlan.zhihu.com/p/137087714)
+  
 - **参考链接：**
+
   - [链接一](https://blog.csdn.net/yizhou1995/article/details/84788144)
 
 
 
+#### *Error：Empty suite*
 
-
-
+- **错误原因：**常见于测试类或测试文件中：（1）类名用包含Test命名，（2）同时代码中使用了main函数调用类中的内容
+- **解决办法：**只要不满足上面的某一条件就行，修改类名，测试用例中不要使用`if __name__ == '__main__':`
+- **相关知识点：**
+  - [编写测试用例](https://zhuanlan.zhihu.com/p/73469149)
 
 
 
