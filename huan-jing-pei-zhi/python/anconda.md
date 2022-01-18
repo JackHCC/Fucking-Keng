@@ -166,3 +166,42 @@ vim pip.conf
 index-url = https://mirrors.aliyun.com/pypi/simple/
 ```
 
+
+
+## Environment
+
+#### CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'
+
+- **错误原因：**
+
+  - 可能的原因一：当前使用的 shell 没有配置好 conda activate，需要运行 conda init 初始化 shell
+  - 可能的原因二：首次激活 conda 虚拟环境时会遇到
+
+- **解决办法：**
+
+  - 方法一：执行命令
+
+    ```
+    conda init zsh
+    ```
+
+    或者
+
+    ```
+    conda init bash
+    ```
+
+  - 方法二：首次激活 conda 虚拟环境，可用 source activate 激活（如下），以后就可以正常使用 conda activate 激活虚拟环境了
+
+    ```
+    # 首次使用 source activate 命令激活虚拟环境 my_conda_virutal_environment
+    source activate my_conda_virutal_environment
+    # 退出虚拟环境
+    conda deactivate
+    # 以后使用 conda activate 命令激活虚拟环境
+    conda activate my_conda_virutal_environment
+    ```
+
+- **参考链接：**
+
+  - [链接一](https://blog.csdn.net/sdnuwjw/article/details/112448792)

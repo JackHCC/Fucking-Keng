@@ -316,13 +316,73 @@ BaseException
 - **错误原因：** 文件权限问题报错
 - **解决办法：** 将读取文件的代码改为`f=open("<file>",'w+')`，默认打开文件的方式为只读方式
 
-#### 
+
+
+## Code
+
+#### *TypeError: only size-1 arrays can be converted to Python scalars*
+
+- **错误原因：** 使用了math库中的函数输入，但必须为固定的数或者其他数据类型（数组），必须固定，不能是变量，不能用于画图
+- **解决办法：** 将math中的函数方法改为numpy中相应的函数：例如`math.exp()`改为`np.exp()`
+- **相关知识点：** 
+- **参考链接：** 
+  - [链接一](https://blog.csdn.net/m0_50707858/article/details/121386608)
 
 
 
+#### *UnicodeEncodeError: 'gbk' codec can't encode character '\ufffd'*
+
+- **错误原因：** Unicode编码错误，gbk编解码器不能编码`\ufffd`字符
+
+- **解决办法：** 
+
+  - 方法一：程序开头加：
+
+    ```python
+    import sys
+    import io
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer,encoding='gb18030') 
+    ```
+
+  - 方法二：输出时忽略无法编码的字符
+
+    ```
+    print 你的字符串.encode(“GBK“, ‘ignore’).decode
+    ```
+
+  - 方法三：如果是读写文件时报错，可以打开文件时以`utf-8`编码打开，例如
+
+    ```python
+    open("test.txt", "r", encoding='utf-8')
+    ```
+
+- **参考链接：** 
+
+  - [链接一](https://blog.csdn.net/qq_38607035/article/details/82595032)
 
 
 
+#### *TypeError: list indices must be integers or slices, not tuple*
 
+- **错误原因：** list数据结构无法使用类似用`data[:,1]`去取第二列数据
 
+- **解决办法：** 使用numpy将list转化为array，例如：
+
+  ```python
+  data=[[0,1],[2,3],[4,5]]
+  print(data[:,1])
+  ```
+
+  改为
+
+  ```python
+  import numpy as np
+  data=[[0,1],[2,3],[4,5]]
+  data=np.array(data)
+  print(data[:,1])
+  ```
+
+- **参考链接：**  
+
+  - [链接一](https://blog.csdn.net/Pika_T/article/details/115300058)
 

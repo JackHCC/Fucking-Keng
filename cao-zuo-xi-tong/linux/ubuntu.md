@@ -24,7 +24,19 @@ sudo chmod 777 <file or dir>
 
 ## Environment
 
+#### *KeyWord: 更新环境变量出错*
 
+- **描述：** 当使用`source ./.bashrc`，而出现大量命令无法找到
+
+- **错误原因：** 环境变量出现问题
+- **解决办法：** 终端执行：
+
+```
+export PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin:/root/bin
+```
+
+- **参考链接：** 
+  - [链接一](https://blog.csdn.net/weixin_43380510/article/details/83352212)
 
 
 
